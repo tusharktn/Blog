@@ -1,0 +1,17 @@
+
+<%- include("partials/header"); -%>
+
+<div class="container">
+    <h1><%=post.title%></h1>
+    <p><%=post.content%></p>
+    <form id="delete" action="/posts/<%=post._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-sm btn-danger">Delete</button>
+    </form>
+    <button class="btn btn-sm btn-success" onclick="alert"><a href="/posts/<%=post._id %>/update">Edit</a></button> 
+    
+</div>
+    
+
+
+
+<%- include("partials/footer"); -%>
